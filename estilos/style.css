@@ -8,6 +8,11 @@
 
     */
 
+    /* 
+    Todas as transformações devem ser feitas na última etapa de cada seletor
+    */
+
+
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0px;
@@ -31,7 +36,6 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
 
     background-color: white;
@@ -42,6 +46,7 @@ section#login {
 
     transition: width 0.3s, height 0.3s;
     transition-timing-function: ease;
+    transform: translate(-50%, -50%);
 }
 
 section#login > div#imagem {
@@ -70,13 +75,42 @@ form > div.campo {
     background-color:  #5f2c82;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px 5px 0px;
     display: block;
+    text-align: center;
+    border: 2px solid #5f2c82;
 }
 
 div.campo > label {
     display: none;
+}
+
+div.campo > span {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #5fd3cf;
+    color: #2f6664;
+    font-size: 1em;
+    width: calc(99.8% - 44px);
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    transform: translateY(-13px);
+}
+
+::-webkit-input-placeholder {
+    padding-left: 3.5px;
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+    border: none;
 }
 
 form > input[type=submit] {
@@ -102,7 +136,8 @@ form > a.botao {
     width: 100%;
     height: 40px;
     padding-top: 7px;
-    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     color: #2f6664;
     background-color: white;
     border: 1px solid #2f6664;
