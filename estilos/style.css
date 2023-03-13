@@ -50,7 +50,7 @@ section#login {
 }
 
 section#login > div#imagem {
-    background: #5f2c82 url(../imagens/back-tela-de-login.jpg);
+    background: #5f2c82 url(../imagens/imagem-principal-background.jpg);
     background-size: cover;
     height: 200px;
     background-position: center top;
